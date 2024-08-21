@@ -1,4 +1,4 @@
-@extends('principal')
+@extends('layout.principal')
 
 @section('conteudo')
     @if(empty($produtos))
@@ -8,7 +8,7 @@
             <h1>Listagem de produtos</h1>
             <table class="table table-striped table-bordered table-hover">
                 @foreach($produtos as $produto)
-                <tr class="danger">
+                <tr class="{{$produto->quantidade<=1 ? 'alert alert-danger' : ''}}">
                         <td>{{$produto->nome}}</td>
                         <td>{{$produto->valor}}</td>
                         <td>{{$produto->descricao}}</td>
@@ -22,4 +22,11 @@
                 @endforeach
             </table>
     @endif
+
+    <h4> 
+        <span class="badge bg-danger float-end">
+            Um ou menos itens no estoque
+        </span>
+    </h4>
+
 @stop

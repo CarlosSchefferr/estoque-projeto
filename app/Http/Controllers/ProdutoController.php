@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Produto;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+
 
 
    
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\DB;
         {
             $produtos = Produto::all();
     
-            return view('listagem')->with('produtos', $produtos);
+            return view('produto.listagem')->with('produtos', $produtos);
         }
     
         
@@ -26,11 +28,28 @@ use Illuminate\Support\Facades\DB;
                 abort(404, "Esse produto não existe");
             }
         
-            return view('detalhes', compact('produto'));
+            return view('produto.detalhes', compact('produto'));
         }
         
+
+        public function novo(){
+
+            return view('produto.formulario');
+
+        }
         
-        
+        public function adiciona(){
+            $params = request()->all();
+            $produto = new Produto($params);
+            $produto->save();
+            $nome = $produto->nome;
+            
+
+            $produtos = DB :: select('select * from produtos');
+
+            return view('produto.adicionado')->with('nome', $nome);
+            
+        }
 
        
         
