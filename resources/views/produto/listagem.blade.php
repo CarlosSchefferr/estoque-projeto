@@ -18,6 +18,16 @@
                                 <span class="fas fa-search"></span>
                             </a>
                         </td>
+                        <td>
+                            <a href="{{route('produto.remove', [$produto->id])}}">
+                                <span class="fas fa-trash"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{route('produto.edita', [$produto->id])}}">
+                                <span class="fas fa-edit"></span>
+                            </a>
+                        </td>
                 </tr>
                 @endforeach
             </table>

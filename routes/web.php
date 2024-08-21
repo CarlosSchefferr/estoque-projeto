@@ -9,3 +9,5 @@ Route::get('/produtos/{id}', [ProdutoController::class, 'mostra'])->name('produt
 Route::get('/produto/novo', [ProdutoController::class, 'novo'])->name('produto.formulario');
 Route::match(array ('GET', 'POST'), '/produto/adiciona', [ProdutoController::class, 'adiciona'])->name('produto.adiciona');
 Route::get('/produto/remove/{id}', [ProdutoController::class, 'remove'])->name('produto.remove');
+Route::get('/produto/edita/{id}', [ProdutoController::class, 'edita'])->name('produto.edita');
+Route::post('produto/atualiza/', [ProdutoController::class, 'atualiza'])->name('produto.atualiza');

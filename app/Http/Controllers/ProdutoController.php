@@ -51,6 +51,52 @@ use Illuminate\Http\Request;
             
         }
 
+        public function remove($id){
+            $produto = Produto::find($id);
+            $produto->delete();
+            return redirect()->route('produto.lista');
+        }
+
+        public function edita($id){
+            $produto = Produto::find($id);
+            
+            if (!$produto) {
+                return redirect()->route('produtos.index')->with('error', 'Produto não encontrado.');
+            }
+
+            return view('produto.edita', compact('produto'));
+
+        }
+
+        public function atualiza(Request $request){
+
+            $validatedData = $request->validate([
+                'id' => 'required|integer|exists:produtos,id',
+                'nome' => 'required|max:255',
+                'descricao' => 'required',
+                'valor' => 'required|numeric',
+                'quantidade' => 'required|numeric'
+            ]);
+            
+            $produto = Produto::find($validatedData['id']);
+
+            if (!$produto) {
+                return redirect()->route('produto.lista')->withErrors('Produto não encontrado.');
+            }
+
+
+            $produto->nome = $validatedData['nome'];
+            $produto->descricao = $validatedData['descricao'];
+            $produto->valor = $validatedData['valor'];
+            $produto->quantidade = $validatedData['quantidade'];
+            $produto->save();
+
+            return redirect()->route('produto.lista', ['id' => $produto->id])
+                              ->with('success', 'Produto atualizado com sucesso.');
+
+
+        }
+
        
         
 }
