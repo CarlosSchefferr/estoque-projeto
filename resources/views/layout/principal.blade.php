@@ -13,23 +13,13 @@
             <div class="container-fluid">
 
             <div class="navbar-header">
-                    <a class="navbar-brand" href="/produtos">
-                        Estoque Laravel
-                    </a>
+                    <a class="navbar-brand" href="/produtos">Estoque Laravel</a>
             </div>
 
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/produtos">
-                            Listagem
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/produto/novo">
-                            Novo
-                        </a>
-                    </li>
-            </ul>
+            <div class="nav pe-5  navbar-right menu">
+                <div class="menu-items btn btn-secondary"><a href="/produtos">Listagem</a></div>
+                <div class="btn btn-success"><a href="/produto/novo">Novo</a></div>
+            </div>
 
             </div>
 

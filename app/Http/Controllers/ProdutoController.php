@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Produto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProdutosRequest;
 
 
 
@@ -38,13 +39,14 @@ use Illuminate\Http\Request;
 
         }
         
-        public function adiciona(){
+        public function adiciona(ProdutosRequest $request){
             $params = request()->all();
             $produto = new Produto($params);
             $produto->save();
             $nome = $produto->nome;
             
 
+            
             $produtos = DB :: select('select * from produtos');
 
             return view('produto.adicionado')->with('nome', $nome);
@@ -96,7 +98,7 @@ use Illuminate\Http\Request;
 
 
         }
+        
 
-       
         
 }

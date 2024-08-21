@@ -25,7 +25,7 @@
     <input type="Number" name="quantidade" class="form-control" value="{{$produto->quantidade}}"/>
     </div>
 
-    <button type="submit" class="btn btn-primary w-100 mt-3">Confirmar</button>
+    <button type="submit" class="btn btn-warning w-100 mt-3">Editar</button>
 </form>
 
 @stop

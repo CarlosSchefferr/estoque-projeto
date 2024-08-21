@@ -8,7 +8,24 @@ nav.navbar.navbar-default{
         color: white ;
         text-decoration: none;
 }
-        
+.menu{
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px !important;
+  }
+  
+  .menu-items {
+    flex: 1;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #333;
+  }
     
     
     li p.navbar-text, a.navbar-brand {
@@ -28,3 +45,4 @@ nav.navbar.navbar-default{
     footer.footer p {
         padding: 10px;
     }
+
