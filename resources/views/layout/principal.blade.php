@@ -27,8 +27,8 @@
 
         @yield('conteudo')
 
-        <footer class="footer">
-            <p>© Projeto Estoque Carlos Augusto.</p>
+        <footer class="footer ">
+            <p class="copyright">© Projeto Estoque Carlos Augusto.</p>
         </footer>
 
     </div>

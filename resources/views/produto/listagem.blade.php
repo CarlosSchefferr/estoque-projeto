@@ -5,8 +5,8 @@
         <div class="alert alert-danger">Você não tem nenhum produto cadastrado.</div>
     @else
 
-            <h1>Listagem de produtos</h1>
-            <table class="table table-bordered table-hover">
+            <h1 class="mt-2 listagem-text" >Listagem de produtos</h1>
+            <table class=" mt-3 table table-striped table-bordered table-light table-hover">
                 <thead class="">
                     <tr>
                         <th scope="col">Nome</th>
