@@ -46,3 +46,12 @@ nav.navbar.navbar-default{
         padding: 10px;
     }
 
+    .remove-icon {
+        color: red;
+        cursor: pointer;
+    }
+
+    .editar-icon {
+        color: green;
+        cursor: pointer;
+    }

@@ -6,25 +6,37 @@
     @else
 
             <h1>Listagem de produtos</h1>
-            <table class="table table-striped table-bordered table-hover">
+            <table class="table table-bordered table-hover">
+                <thead class="">
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Detalhes</th>
+                        <th scope="col">Remover</th>
+                        <th scope="col">Editar</th>
+                    </tr>
+                </thead>
                 @foreach($produtos as $produto)
+                
                 <tr class="{{$produto->quantidade<=1 ? 'alert alert-danger' : ''}}">
                         <td>{{$produto->nome}}</td>
                         <td>{{$produto->valor}}</td>
                         <td>{{$produto->descricao}}</td>
                         <td>{{$produto->quantidade}}</td>
                         <td>
-                            <a href="{{ route('produto.detalhes', [$produto->id]) }}">
+                            <a class="detalhes-icon" href="{{ route('produto.detalhes', [$produto->id]) }}">
                                 <span class="fas fa-search"></span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('produto.remove', [$produto->id])}}">
+                            <a class="remove-icon" href="{{route('produto.remove', [$produto->id])}}">
                                 <span class="fas fa-trash"></span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('produto.edita', [$produto->id])}}">
+                            <a class="editar-icon" href="{{route('produto.edita', [$produto->id])}}">
                                 <span class="fas fa-edit"></span>
                             </a>
                         </td>

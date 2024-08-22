@@ -9,6 +9,7 @@ use App\Http\Requests\ProdutosRequest;
 
 
 
+
    
 
     class ProdutoController extends Controller
@@ -98,7 +99,9 @@ use App\Http\Requests\ProdutosRequest;
 
 
         }
-        
 
-        
+    
+     
 }
+
+
