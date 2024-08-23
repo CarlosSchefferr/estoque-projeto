@@ -22,20 +22,20 @@ class RegisterController extends Controller
     public function store(RegisterRequest $request)
     {
        
-        // Valida os dados do formulário de registro usando RegisterRequest
+        
     $validatedData = $request->validated();
 
-    // Cria um novo usuário no banco de dados
+    
     $user = User::create([
         'name' => $validatedData['name'],
         'email' => $validatedData['email'],
-        'password' => bcrypt($validatedData['password']), // Certifique-se de hashear a senha
+        'password' => bcrypt($validatedData['password']), 
     ]);
 
-    // Loga o usuário recém-criado
+   
     Auth::login($user);
 
-    // Redireciona para a página inicial após o login
+    
     return redirect('/login');
     }
     

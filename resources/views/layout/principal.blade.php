@@ -31,15 +31,11 @@
                 <img src="{{ asset('images\Logo2.png') }}" alt="Logo" class="logo2 ">
             </div>
 
-            <div class="nav pe-5  navbar-right menu">
-                <form method="POST" action={{ route('logout') }}>
-                    @csrf
-                    <div class="menu-items btn btn-danger"><a>Sair</a></div>
-                </form>
+            <div class="nav pe-5 navbar-right menu">
                 
+    
                 <div class="menu-items btn btn-secondary"><a href="/produtos">Listagem</a></div>
                 <div class="btn menu-items btn-success"><a href="/produto/novo">Novo</a></div>
-                
             </div>
 
             </div>
@@ -49,9 +45,16 @@
        
 
         @yield('conteudo')
+        <form method="POST" action={{ route('logout') }}>
+                    @csrf
+                    <div>
+                        <input class="menu-items btn btn-danger" type="submit" value="Sair">
+                    </div>
+        </form>
 
-        <footer class="footer ">
+        <footer class="footer mt-1">
             <p class="copyright">© Projeto Estoque Carlos Augusto.</p>
+            
         </footer>
 
     </div>

@@ -72,7 +72,7 @@
         <div class="card-body">Bem Vindo, <span style="color: #337ab7">{{ Auth::user()->name }}</span>!</div>
         <p class="welcome-text">Gerencie seu estoque de forma fácil e eficiente.</p>
         <div class=" flex mt-4 align-items-colum">
-            <a href="/produtos" class="btn btn-primary btn-custom mr-4">Acessar seu Estoque</a>
+            <a href="/produtos" class="btn btn-primary btn-custom mr-4">Acessar meu Estoque</a>
         </div>
 </div>
 

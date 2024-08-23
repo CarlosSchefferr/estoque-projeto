@@ -23,7 +23,7 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'As credenciais fornecidas não correspondem aos nossos registros.',
+            'email' => 'E-Mail ou Senha incorretos.',
         ]);
     }
 }

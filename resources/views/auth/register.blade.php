@@ -4,13 +4,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet">
     <title>Controle de estoque</title>
+    <style>
+        body {
+            background-color: #337ab7;
+            font-family: 'Glegoo', serif;
+        }
+        .logo2 {
+            width: 168px;
+            height: 108px;
+            margin: 20px auto;
+            display: block;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+           
+        }
+        .card-body {
+            padding: 20px;
+        }
+
+        .color {
+            color: white;
+        }
+    </style>
 </head>
+<img src="{{ asset('images/Logo2.png') }}" alt="Logo" class="logo2 mt-5">
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Registrar novo usuário') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -69,7 +96,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary mt-3">
-                                    {{ __('Register') }}
+                                    {{ __('Confirmar') }}
                                 </button>
                             </div>
                         </div>
