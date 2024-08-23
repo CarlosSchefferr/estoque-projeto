@@ -62,3 +62,9 @@ nav.navbar.navbar-default{
         color: green;
         cursor: pointer;
     }
+
+    .logo {
+      width: 168px;
+      height: 108px;
+      flex-shrink: 0;
+    }

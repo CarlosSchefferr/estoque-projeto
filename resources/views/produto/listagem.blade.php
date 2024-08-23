@@ -1,12 +1,52 @@
 @extends('layout.principal')
 
 @section('conteudo')
+@auth
+    <head>
+        <style>
+            .listagem-text {
+                font-family: 'Glegoo', serif;
+               
+            }
+
+            .table {
+                font-family: 'Glegoo', serif;
+               
+            }
+
+            .alert-danger {
+                font-family: 'Glegoo', serif;
+                
+            }
+
+            .detalhes-icon {
+                color: #337ab7;
+               
+            }
+
+            .remove-icon {
+                color: #d9534f;
+                
+            }
+
+            .editar-icon {
+                color: #5cb85c;
+               
+            }
+
+            .font-fix {
+                font-family: 'Glegoo', serif;
+                
+            }
+
+        </style>
+    </head>
     @if(empty($produtos))
         <div class="alert alert-danger">Você não tem nenhum produto cadastrado.</div>
     @else
 
             <h1 class="mt-2 listagem-text" >Listagem de produtos</h1>
-            <table class=" mt-3 table table-striped table-bordered table-light table-hover">
+            <table class=" mt-3 table table-striped table-bordered table-hover">
                 <thead class="">
                     <tr>
                         <th scope="col">Nome</th>
@@ -46,9 +86,10 @@
     @endif
 
     <h4> 
-        <span class="badge bg-danger float-end">
+        <span class="font-fix badge bg-danger float-end">
             Um ou menos itens no estoque
         </span>
     </h4>
+@endauth
 
 @stop
