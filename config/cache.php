@@ -90,6 +90,15 @@ return [
             'driver' => 'octane',
         ],
 
+
+        'view' => [
+            'driver' => 'file',
+            'cache' => [
+                'store' => 'file',
+                'ttl' => 60,
+            ]
+        ]
+
     ],
 
     /*
